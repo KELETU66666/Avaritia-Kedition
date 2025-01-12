@@ -59,7 +59,7 @@ public class ExtremeShapelessRecipe extends ExtremeRecipeBase {
                     Ingredient ing = req.next();
                     if (ing.apply(slot)) {
                         for (ItemStack stack : ing.getMatchingStacks()) {
-                            if (ItemStack.areItemStackTagsEqual(stack, slot)) {
+                            if (!stack.hasTagCompound() || ItemStack.areItemStackTagsEqual(stack, slot)) {
                                 inRecipe = true;
                                 req.remove();
                                 break;
