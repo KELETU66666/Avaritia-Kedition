@@ -43,7 +43,7 @@ public class Tsundere {
         SubTileAsgardandelion.lexicon = new LudicrousLexicon("asgardandelion", BotaniaAPI.categoryGenerationFlowers);
         SubTileAsgardandelion.lexicon.addPage(BotaniaAPI.internalHandler.textPage("avaritia.lexicon.asgardandelion.0"));
         SubTileAsgardandelion.lexicon.setIcon(cheaty);
-        ExtremeCraftingManager.addRecipe(cheaty,
+        ExtremeCraftingManager.addRecipe("asgardandelion", cheaty,
                 "   III   ",
                 "  IIIII  ",
                 "  IIXII  ",
@@ -82,7 +82,7 @@ public class Tsundere {
 
         Block potato = ModBlocks.tinyPotato;
 
-        ExtremeCraftingManager.addRecipe(new ItemStack(infinitato),
+        ExtremeCraftingManager.addRecipe("infinitato", new ItemStack(infinitato),
                 "IIIIIIIII",
                 "IIIIIIIII",
                 "IIISISIII",

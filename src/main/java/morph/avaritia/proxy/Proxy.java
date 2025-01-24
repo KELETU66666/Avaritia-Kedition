@@ -126,7 +126,7 @@ public class Proxy {
                 NBTTagCompound tag = new NBTTagCompound();
                 tag.setByte("Creative", (byte) 1);
                 cell.setTagCompound(tag);
-                ExtremeCraftingManager.addRecipe(cell,
+                ExtremeCraftingManager.addRecipe("creative_te_cell", cell,
                         "IIIIRIIII",
                         "IEEEREEEI",
                         "IERRRRREI",
@@ -154,7 +154,7 @@ public class Proxy {
                 Block creative = getBlock("appliedenergistics2", "creative_energy_cell");
                 Block dense = getBlock("appliedenergistics2", "dense_energy_cell");
 
-                ExtremeCraftingManager.addRecipe(new ItemStack(creative, 1, 0),
+                ExtremeCraftingManager.addRecipe("creative_ae2_cell", new ItemStack(creative, 1, 0),
                         "IIIIDIIII",
                         "IEEEDEEEI",
                         "IEEEDEEEI",

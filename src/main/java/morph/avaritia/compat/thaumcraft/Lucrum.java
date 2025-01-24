@@ -58,7 +58,7 @@ public class Lucrum {
                 "ingotInfinity"
         ));
 
-        ExtremeCraftingManager.addRecipe(new ItemStack(ModItems.crystal_studded_cosmic_neutronium_caster, 1),
+        ExtremeCraftingManager.addRecipe("infinity_caster", new ItemStack(ModItems.crystal_studded_cosmic_neutronium_caster, 1),
                 "  C C C  ",
                 "  C C C  ",
                 "  CNCNC C",

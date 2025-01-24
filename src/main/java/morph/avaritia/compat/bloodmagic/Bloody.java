@@ -24,7 +24,7 @@ public class Bloody {
             tag.setString("orb", "bloodmagic:transcendent");
         archOrb.setTagCompound(tag);
 
-        ExtremeCraftingManager.addRecipe(new ItemStack(ModItems.armok_orb, 1),
+        ExtremeCraftingManager.addRecipe("armok_orb", new ItemStack(ModItems.armok_orb, 1),
                 "   NNN   ",
                 "  NIIIN  ",
                 " NIOIOIN ",
