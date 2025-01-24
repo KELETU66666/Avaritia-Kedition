@@ -15,7 +15,7 @@ public class Bloody {
         ModItems.armok_orb = ModItems.registerItem(new ItemArmokOrb());
     }
 
-    public static void init() throws Compat.ItemNotFoundException {
+    public static void initRecipes() throws Compat.ItemNotFoundException {
         ItemStack archOrb = new ItemStack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("bloodmagic", "blood_orb")));
         NBTTagCompound tag = new NBTTagCompound();
         if(!ConfigHandler.general.enableTierSixEvenThoughThereIsNoContent)

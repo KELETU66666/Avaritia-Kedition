@@ -109,17 +109,61 @@ public class Proxy {
             }
         }
 
+        if(Loader.isModLoaded("tails")){
+            try
+            {
+                InfiniteFoxes.floof();
+            }
+            catch(Throwable e){
+                Lumberjack.log(Level.INFO, "Avaritia was not fluffy enough!");
+                e.printStackTrace();
+            }
+        }
+    }
+
+    public void postInit(FMLPostInitializationEvent event) {
+        if(Compat.thaumic) {
+            try {
+                Lucrum.postInit();
+            } catch(Throwable e){
+                Lumberjack.log(Level.INFO, "Avaritia accumulated too much Warp!");
+                e.printStackTrace();
+                Compat.thaumic = false;
+            }
+        }
+    }
+
+    public void initRecipes(){
+        if(Compat.thaumic) {
+            try {
+                Lucrum.initRecipes();
+            } catch(Throwable e){
+                Lumberjack.log(Level.INFO, "Avaritia accumulated too much Warp!");
+                e.printStackTrace();
+                Compat.thaumic = false;
+            }
+        }
+
+        if(Compat.botan) {
+            try {
+                Tsundere.initRecipes();
+            } catch(Throwable e){
+                Lumberjack.log(Level.INFO, "Avaritia is wondering where all the dayblooms went.");
+                e.printStackTrace();
+                Compat.botan = false;
+            }
+        }
+
 
         if(Compat.blood) {
             try {
-                Bloody.init();
+                Bloody.initRecipes();
             } catch (Throwable e){
                 Lumberjack.log(Level.INFO, "Avaritia decided to use a Fallen Kanade instead.");
                 e.printStackTrace();
                 Compat.blood = false;
             }
         }
-
         if(Compat.te){
             try {
                 ItemStack cell = new ItemStack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("thermalexpansion", "cell")));
@@ -172,29 +216,6 @@ public class Proxy {
                 Lumberjack.log(Level.INFO, "Avaritia couldn't figure out how channels work.");
                 e.printStackTrace();
                 ae2 = false;
-            }
-        }
-
-        if(Loader.isModLoaded("tails")){
-            try
-            {
-                InfiniteFoxes.floof();
-            }
-            catch(Throwable e){
-                Lumberjack.log(Level.INFO, "Avaritia was not fluffy enough!");
-                e.printStackTrace();
-            }
-        }
-    }
-
-    public void postInit(FMLPostInitializationEvent event) {
-        if(Compat.thaumic) {
-            try {
-                Lucrum.postInit();
-            } catch(Throwable e){
-                Lumberjack.log(Level.INFO, "Avaritia accumulated too much Warp!");
-                e.printStackTrace();
-                Compat.thaumic = false;
             }
         }
     }

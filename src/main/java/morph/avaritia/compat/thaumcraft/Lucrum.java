@@ -58,21 +58,6 @@ public class Lucrum {
                 "ingotInfinity"
         ));
 
-        ExtremeCraftingManager.addRecipe("infinity_caster", new ItemStack(ModItems.crystal_studded_cosmic_neutronium_caster, 1),
-                "  C C C  ",
-                "  C C C  ",
-                "  CNCNC C",
-                "C CNCNCNC",
-                "CNNXXXNNC",
-                "CCNXIXNC ",
-                " NNXXXNN ",
-                "  NN NN  ",
-                "   NNN   ",
-                'C', "ingotCrystalMatrix",
-                'X', "ingotInfinity",
-                'N', "ingotCosmicNeutronium",
-                'I', new ItemStack(ModItems.resource, 1, 5));
-
         ThaumcraftApi.registerResearchLocation(new ResourceLocation(Avaritia.MOD_ID, "research/research.json"));
     }
 
@@ -93,6 +78,24 @@ public class Lucrum {
         ThaumcraftApi.registerObjectTag(new ItemStack(ModItems.singularity, 1, 8), new AspectList().add(ULTRA_DEATH, 3).add(Aspect.METAL, 100));
         ThaumcraftApi.registerObjectTag(new ItemStack(ModItems.infinity_sword), new AspectList().add(ULTRA_DEATH, 60).add(Aspect.AVERSION, 999).add(Aspect.DEATH, 999).add(Aspect.ELDRITCH, 100));
         ThaumcraftApi.registerComplexObjectTag(new ItemStack(ModItems.skull_sword), new AspectList().add(ULTRA_DEATH, 1).add(Aspect.FIRE, 2).add(Aspect.CRYSTAL, 16).add(Aspect.DEATH, 4));
+
+    }
+
+    public static void initRecipes() throws Compat.ItemNotFoundException{
+        ExtremeCraftingManager.addRecipe("infinity_caster", new ItemStack(ModItems.crystal_studded_cosmic_neutronium_caster, 1),
+                "  C C C  ",
+                "  C C C  ",
+                "  CNCNC C",
+                "C CNCNCNC",
+                "CNNXXXNNC",
+                "CCNXIXNC ",
+                " NNXXXNN ",
+                "  NN NN  ",
+                "   NNN   ",
+                'C', "ingotCrystalMatrix",
+                'X', "ingotInfinity",
+                'N', "ingotCosmicNeutronium",
+                'I', new ItemStack(ModItems.resource, 1, 5));
 
     }
 }

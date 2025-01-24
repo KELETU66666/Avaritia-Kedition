@@ -36,27 +36,14 @@ public class Tsundere {
         BotaniaAPI.addSubTileToCreativeMenu("soarleander");
     }
 
-    public static void init() throws Compat.ItemNotFoundException{
+    public static void init() throws Compat.ItemNotFoundException {
 
         ItemStack cheaty = getFlower("asgardandelion");
 
         SubTileAsgardandelion.lexicon = new LudicrousLexicon("asgardandelion", BotaniaAPI.categoryGenerationFlowers);
         SubTileAsgardandelion.lexicon.addPage(BotaniaAPI.internalHandler.textPage("avaritia.lexicon.asgardandelion.0"));
         SubTileAsgardandelion.lexicon.setIcon(cheaty);
-        ExtremeCraftingManager.addRecipe("asgardandelion", cheaty,
-                "   III   ",
-                "  IIIII  ",
-                "  IIXII  ",
-                "  IIIII  ",
-                "   III   ",
-                " nn N nn ",
-                "nnnnNnnnn",
-                " nn N nn ",
-                "    N    ",
-                'I', "ingotInfinity",
-                'X', new ItemStack(ModItems.resource, 1, 5),
-                'N', "ingotCosmicNeutronium",
-                'n', new ItemStack(ModItems.resource, 1, 3));
+
 
         ItemStack chicken = getFlower("soarleander");
         BotaniaAPI.registerRuneAltarRecipe(
@@ -82,20 +69,6 @@ public class Tsundere {
 
         Block potato = ModBlocks.tinyPotato;
 
-        ExtremeCraftingManager.addRecipe("infinitato", new ItemStack(infinitato),
-                "IIIIIIIII",
-                "IIIIIIIII",
-                "IIISISIII",
-                "IIIIIIIII",
-                "IISIXISII",
-                "IIISSSIII",
-                "IIIIIIIII",
-                "IIIIIIIII",
-                "IIIIIIIII",
-                'I', new ItemStack(potato),
-                'X', new ItemStack(ModItems.resource, 1, 5),
-                'S', new ItemStack(Items.DIAMOND));
-
         BlockInfinitato.lexiconEntry = new LudicrousLexicon("infinitato", BotaniaAPI.categoryMisc);
         BlockInfinitato.lexiconEntry.setLexiconPages(
                 BotaniaAPI.internalHandler.textPage("avaritia.lexicon.infinitato.0"),
@@ -114,6 +87,44 @@ public class Tsundere {
                         'S', new ItemStack(Items.DIAMOND))))
         ).setIcon(new ItemStack(infinitato));
     }
+
+
+    public static void initRecipes() throws Compat.ItemNotFoundException {
+
+        ItemStack cheaty = getFlower("asgardandelion");
+
+        ExtremeCraftingManager.addRecipe("asgardandelion", cheaty,
+                "   III   ",
+                "  IIIII  ",
+                "  IIXII  ",
+                "  IIIII  ",
+                "   III   ",
+                " nn N nn ",
+                "nnnnNnnnn",
+                " nn N nn ",
+                "    N    ",
+                'I', "ingotInfinity",
+                'X', new ItemStack(ModItems.resource, 1, 5),
+                'N', "ingotCosmicNeutronium",
+                'n', new ItemStack(ModItems.resource, 1, 3));
+
+        Block potato = ModBlocks.tinyPotato;
+
+        ExtremeCraftingManager.addRecipe("infinitato", new ItemStack(infinitato),
+                "IIIIIIIII",
+                "IIIIIIIII",
+                "IIISISIII",
+                "IIIIIIIII",
+                "IISIXISII",
+                "IIISSSIII",
+                "IIIIIIIII",
+                "IIIIIIIII",
+                "IIIIIIIII",
+                'I', new ItemStack(potato),
+                'X', new ItemStack(ModItems.resource, 1, 5),
+                'S', new ItemStack(Items.DIAMOND));
+    }
+
     private static ItemStack getFlower(String type) {
         ItemStack flower = new ItemStack(ModBlocks.specialFlower, 1, 0);
         NBTTagCompound tag = new NBTTagCompound();

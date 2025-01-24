@@ -72,5 +72,6 @@ public class Avaritia {
         CompressorBalanceCalculator.gatherBalanceModifier();
         AvaritiaRecipeManager.init();
         FoodRecipes.initFoodRecipes();
+        proxy.initRecipes();
     }
 }
