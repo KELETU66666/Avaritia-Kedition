@@ -22,6 +22,6 @@ public class CTIngredientWrapper extends Ingredient {
 
     @Override
     public boolean apply(@Nullable ItemStack stack) {
-        return ingredient.matches(new MCItemStack(stack));
+        return ingredient.matches(MCItemStack.createNonCopy(stack));
     }
 }

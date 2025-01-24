@@ -54,7 +54,7 @@ dependencies {
     deobfCompile 'curse.maven:blood-magic-224791:2822288'
 
     deobfCompile 'curse.maven:jei-238222:3040523'
-    deobfCompile "CraftTweaker2:CraftTweaker2-MC1120-Main:1.12-4.1.8.470"
+    deobfCompile "CraftTweaker2:CraftTweaker2-MC1120-Main:1.12-4.1.20.702"
     deobfCompile 'curse.maven:thaumcraft-223628:2629023'
     deobfCompile 'curse.maven:baubles-227083:2518667'
     compileOnly 'curse.maven:tails-223584:2445532'
